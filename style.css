@@ -16,7 +16,6 @@ body{
     font-family: "Lato", sans-serif;
     width: 100%;
     height: 100%; 
-    background: linear-gradient(rgb(47, 150, 163),rgb(48, 62, 143));
 }
 /* --------------- */
 
@@ -51,6 +50,11 @@ main{
     justify-content: flex-end;
 }
 
+@media screen and (max-width: 768px) {
+    
+}
+
+
 /* ---MAP SEARCH SECTION */
 /* level 0 */
 .map-search-section{
@@ -61,13 +65,13 @@ main{
     width: 50vw;
     left: -50vw;
     height: 100%;
-    padding: 20px;
+    padding: 10px;
     background-color: teal;
     transition: all 0.6s ease;
     z-index: 4;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .map-search-section{
         width: 100%;
         height: 50vh;
@@ -141,11 +145,10 @@ main{
     /* background-color: rgb(0, 4, 255); */
 }
 
-
 .coords-container div input{
     height: 30px;
     font-size: 15px;
-    padding: 10px;
+    padding: 0px;
     margin: 5px;
     outline: none;
     border: none;
@@ -251,18 +254,17 @@ main{
 }
 
 .shrink-info{
-    width: 50vw;
+    padding: 0 0 0 50vw;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .show-map{
         left: auto;
         top: 0;         
     }
 
     .shrink-info{
-        width: 100%;
-        height: 50vh;
+        padding: 50vh 0 0 0;
     }
 }
 
