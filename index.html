@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/851a3c2fc1.js" crossorigin="anonymous"></script>
+    
+    <!-- Mapbox API -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <nav class="nav-bar">
+        <div class="globe-icon">
+            <i class="fas fa-globe"></i>
+        </div>
+    </nav>
+    <!-- end of nav bar -->
+
+    <main>
+        <!-- MAP SEARCH -->
+        <section class="map-search-section">
+                <div class="header">
+                    <h1 class="search-title">Search location</h1>
+                    <div class="arrow-icon-container">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                </div>
+                <div class="coords-container">
+                    <h2 class="sub-title">Coordenates:</h2>
+                    <div class="coords-inputs"> 
+                        <div>Latitude: 
+                        <input id="latitude" type="number"></div>
+                        <div>Longitude: 
+                        <input id="longitude" type="number"></div>
+                    </div>
+                </div> 
+                <div class="map-container">
+                    <h2 class="sub-title">Select on map</h2>
+                    <div class="map-location">
+                        <div class="location-dot"></div>
+                        <div id="map"></div> 
+                    </div>
+                </div>
+                <button class="button-search" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+        </section>
+        <!-- end of location search -->
+
+        <!--INFORMATION-->
+        <section class="information-section">
+            <div class="location">
+                <h1 class="location-timezone">Timezone</h1>
+                <img class="weather-icon" src="" alt="icon">
+            </div>
+            <div class="temperature">        
+                <div class="temperature-section">
+                    <h2 class="temperature-value">-</h2>
+                    <span class="temperature-degree">°C</span>
+                </div>
+                <div class="temperature-description">Its freaking cold</div>
+            </div>
+        </section>
+    <!-- end of information -->
+    </main>
+
+    <!-- JAVASCRIPT LINK -->
+    <script src="./app.js"></script>
+
+</body>
+</html>

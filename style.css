@@ -1,0 +1,269 @@
+/* ----PRESET--- */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+:root{
+    --translate : calc(-100vw / 2);
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1em;
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    height: 100%; 
+    background: linear-gradient(rgb(47, 150, 163),rgb(48, 62, 143));
+}
+/* --------------- */
+
+/* ---------------NAV BAR----------------- */
+.nav-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:transparent;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 2;
+}
+
+.fa-globe{
+    color: white;
+    position: relative;
+    font-size: 30px;
+    cursor: pointer;    
+}
+
+.globe-icon{
+    padding: 30px;
+}
+/* -------------end of nav bar------------------ */
+
+/* ------------------ MAIN ----------------------- */
+main{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ---MAP SEARCH SECTION */
+/* level 0 */
+.map-search-section{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    left: -50vw;
+    height: 100%;
+    padding: 20px;
+    background-color: teal;
+    transition: all 0.6s ease;
+    z-index: 4;
+}
+
+/* level 1 */
+.header, .coords-container, .map-container, .button-search{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;  
+    width: 100%; 
+    color: white;
+}
+
+.header{
+    justify-content: flex-start;
+    height: 10%;
+}
+
+.coords-container{
+    flex-direction: column;
+    height: 20%;
+}
+
+.map-container{
+    flex-direction: column;
+    height: 100%;
+}
+
+.button-search{
+    background-color:rgb(27, 92, 100);
+    height: 10%;
+    margin-top: 10px;
+    font-size: 30px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* level 2 */
+.search-title{
+    margin-right: auto;
+}
+
+.arrow-icon-container{
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.fa-arrow-left{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.sub-title{
+    position: relative;
+    margin: 10px;
+    font-weight: 100;
+    font-size: 20px;
+    /* background-color: rgb(0, 4, 255); */
+}
+
+
+.coords-container div input{
+    height: 30px;
+    font-size: 15px;
+    padding: 10px;
+    margin: 5px;
+    outline: none;
+    border: none;
+    color: black;
+}
+
+.coords-container span{
+    color: white;
+}
+
+
+.map-location{
+    width: 100%;
+    height: 100%;
+    /* background-color: tomato; */
+}
+
+#map{
+    position: relative; 
+    width: 100%; 
+    height: 100%;
+}
+
+.mapboxgl-map, .mapboxgl-canvas-container, .mapboxgl-canvas{
+    height: 100%;
+    width: 100%;
+    outline: none;
+}
+
+/*
+.location-dot{
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -8px;
+    background-color: red;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 5;
+}*/
+
+.button-search:hover{
+    background-color:rgb(21, 67, 73);
+}
+
+/* ---end of map seach section --- */
+
+/* ----INFORMATION SECTION---- */
+.information-section{
+    position: relative;
+    height: 100vh;
+    width: 100%; 
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(47, 150, 163),rgb(48, 62, 143));
+    font-family: sans-serif;
+    color: white;
+    transition: all 0.8s ease;
+}
+
+.location, .temperature{
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.temperature{
+    flex-direction: column;
+}
+
+.temperature-section{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.temperature-value{
+    font-size: 40px;
+}
+
+.temperature-degree{
+    margin: 40px;
+    font-size: 30px;    
+}
+
+.temperature-description{
+    font-size: 18px;
+}
+/* ------- end of information section -------- */
+
+
+.show-map{
+    left: 0;
+}
+
+.shrink-info{
+    width: 50vw;
+}
+
+.shadow{
+    box-shadow: 0 0 20px 5px rgba(30, 30, 31, 0.219);
+}
+
+
+/*-----end of main ---- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
