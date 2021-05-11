@@ -58,11 +58,11 @@ const Weather = {
     searchWeather: async function () {
         try{
             const proxy = "https://cors-anywhere.herokuapp.com/";
-            const api = `${proxy}http://api.openweathermap.org/data/2.5/weather?lat=${Location.coords.latitude}&lon=${Location.coords.longitude}&appid=f7383d6d274de894f79cc4c54581bd15`;
+            const api = `${proxy}https://api.openweathermap.org/data/2.5/weather?lat=${Location.coords.latitude}&lon=${Location.coords.longitude}&appid=f7383d6d274de894f79cc4c54581bd15`;
             console.log("api: " + api);
             const result = await fetch(api);
             console.log("Result: " + result);
-            const data = await JSON.parse(result);
+            const data = await result.json();
             console.log("Weather found: " + data);
 
             //Pass values to in-RAM object "Location"
