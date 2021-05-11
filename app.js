@@ -55,13 +55,13 @@ const Location = {
 
 //WEATHER OBJECT
 const Weather = {
-    async searchWeather() {
+    static async searchWeather() {
         try{
-            //let proxy = "https://cors-anywhere.herokuapp.com/";
-            let api = `http://api.openweathermap.org/data/2.5/weather?lat=${Location.coords.latitude}&lon=${Location.coords.longitude}&appid=cc3dec0ffce7f143755220d397407580`;
+            const proxy = "https://cors-anywhere.herokuapp.com/";
+            const api = `${proxy}http://api.openweathermap.org/data/2.5/weather?lat=${Location.coords.latitude}&lon=${Location.coords.longitude}&appid=cc3dec0ffce7f143755220d397407580`;
             console.log("api: " + api);
-            let result = await fetch(api);
-            let data = await result.json();
+            const result = await fetch(api);
+            const data = await result.json();
             console.log("Weather found: " + data);
 
             //Pass values to in-RAM object "Location"
@@ -78,7 +78,7 @@ const Weather = {
         }catch(err){
             console.log(err);
         }
-    },
+    }
     
 }
 
