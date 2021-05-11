@@ -57,8 +57,8 @@ const Location = {
 const Weather = {
     async searchWeather() {
         try{
-            let proxy = "https://cors-anywhere.herokuapp.com/";
-            let api = `${proxy}http://api.openweathermap.org/data/2.5/weather?lat=${Location.coords.latitude}&lon=${Location.coords.longitude}&appid=cc3dec0ffce7f143755220d397407580`;
+            //let proxy = "https://cors-anywhere.herokuapp.com/";
+            let api = `http://api.openweathermap.org/data/2.5/weather?lat=${Location.coords.latitude}&lon=${Location.coords.longitude}&appid=cc3dec0ffce7f143755220d397407580`;
             console.log("api: " + api);
             let result = await fetch(api);
             let data = await result.json();
