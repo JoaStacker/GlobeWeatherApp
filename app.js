@@ -61,6 +61,7 @@ const Weather = {
             const api = `${proxy}http://api.openweathermap.org/data/2.5/weather?lat=${Location.coords.latitude}&lon=${Location.coords.longitude}&appid=f7383d6d274de894f79cc4c54581bd15`;
             console.log("api: " + api);
             const result = await fetch(api);
+            console.log("Result: " + result);
             const data = await result.json();
             console.log("Weather found: " + data);
 
