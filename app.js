@@ -62,7 +62,7 @@ const Weather = {
             console.log("api: " + api);
             const result = await fetch(api);
             console.log("Result: " + result);
-            const data = await result.json();
+            const data = await JSON.parse(result);
             console.log("Weather found: " + data);
 
             //Pass values to in-RAM object "Location"
